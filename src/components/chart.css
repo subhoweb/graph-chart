@@ -1,8 +1,51 @@
-.chart-container{
-    height: 350px;
-    width: 80%;
-    border: 2px solid #000;
-    margin: 5px 10px 5px 10px;
-    border-right-width: 0;
-    border-top-width:0;
+.container {
+  height: 500px;
+  width: 80%;
+  margin-left: 10%;
+  position: relative;
+}
+.chart {
+  height: 100%;
+  width: 100%;
+  border: 2px solid #000;
+  border-right-width: 0;
+  border-top-width: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+}
+.y-axis-label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+  font-weight: bold;
+  margin-left: -15px;
+}
+.x-axis-label {
+  position: absolute;
+  font-weight: bold;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.bar {
+  flex: 1;
+  position: relative;
+}
+.tooltip {
+  opacity: 0;
+  background-color: #000;
+  color: white;
+  position: absolute;
+  top: 0;
+  transform: translate(50%, -120%);
+  right: 50%;
+  width: max-content;
+  z-index: 10;
+  padding: 4px;
+  border-radius: 4px;
+}
+.bar:hover .tooltip {
+  opacity: 1;
 }
